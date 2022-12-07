@@ -16,7 +16,7 @@ jobs:
       - run: yarn install --frozen-lockfile
       - uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }} // By using secrets, modify this line with the key from IAM user.
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }} // By using secrets, modify this line with the key from IAM user.
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }} # By using secrets, modify this line with the key from IAM user.
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }} # By using secrets, modify this line with the key from IAM user.
           aws-region: us-east-1
       - run: aws s3 sync ./out s3://myftproject1
